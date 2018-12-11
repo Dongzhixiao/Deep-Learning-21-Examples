@@ -30,7 +30,7 @@ if __name__ == '__main__':
     y_ = tf.placeholder(tf.float32, [None, 10])
 
     # 将单张图片从784维向量重新还原为28x28的矩阵图片
-    x_image = tf.reshape(x, [-1, 28, 28, 1])
+    x_image = tf.reshape(x, [-1, 28, 28, 1])  #-1表示形状第一维的大小根据x自动确定
 
     # 第一层卷积层
     W_conv1 = weight_variable([5, 5, 1, 32])

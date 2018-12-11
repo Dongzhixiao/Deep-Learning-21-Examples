@@ -15,6 +15,7 @@ with tf.Session() as sess:
     # reader从文件名队列中读数据。对应的方法是reader.read
     reader = tf.WholeFileReader()
     key, value = reader.read(filename_queue)
+    print(key,'==>',value)
     # tf.train.string_input_producer定义了一个epoch变量，要对它进行初始化
     tf.local_variables_initializer().run()
     # 使用start_queue_runners之后，才会开始填充队列

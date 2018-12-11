@@ -21,3 +21,6 @@ print(mnist.train.images[0, :])
 
 # 打印出第0幅图片的标签
 print(mnist.train.labels[0, :])
+
+
+
